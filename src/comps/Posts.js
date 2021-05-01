@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import sanityClient from "../client.js";
 import { Link } from "react-router-dom";
+import Loader from "react-loader-spinner";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 export default function Posts() {
   const [postData, setPost] = useState(null);
@@ -33,6 +35,11 @@ export default function Posts() {
         <h2 className="text-lg text-gray-600 flex justify-center mb-12 ">
           Welcome to my page of blog posts
         </h2>
+        {!postData && (
+          <div className="grid justify-items-center">
+            <Loader type="Puff" color="#00BFFF" height={100} width={100} />
+          </div>
+        )}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {postData &&
             postData.map((post, index) => (

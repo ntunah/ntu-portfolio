@@ -14,7 +14,7 @@ export default function App() {
       <NavBar />
       <Switch>
         <Route component={Home} path="/" exact />
-        <Route component={About} path="/about" />
+        <Route component={About} path="/aboutMe" />
         <Route component={SinglePost} path="/post/:slug" />
         <Route component={Posts} path="/posts" />
         <Route component={Projects} path="/projects" />

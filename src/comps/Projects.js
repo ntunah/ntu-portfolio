@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import sanityClient from "../client";
+import Loader from "react-loader-spinner";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 export default function Projects() {
   const [projectData, setProjectData] = useState(null);
@@ -27,6 +29,11 @@ export default function Projects() {
         <h2 className="text-lg text-gray-600 flex justify-center mb-12">
           Welcome to my projects page!
         </h2>
+        {!projectData && (
+          <div className="grid justify-items-center">
+            <Loader type="Puff" color="#00BFFF" height={100} width={100} />
+          </div>
+        )}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {projectData &&
             projectData.map((project, index) => (

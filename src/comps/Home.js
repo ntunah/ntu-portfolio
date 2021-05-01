@@ -6,7 +6,7 @@ export default function Home() {
     <main>
       <img
         src="https://images.unsplash.com/photo-1587133599421-40a3cd84831b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fGRlc2t0b3AlMjBjb21wdXRlcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-        className="absolute object-cover w-full h-full "
+        className="absolute  w-full h-full "
         alt="background image"
       />
       <seaction className="relative flex justify-center min-h-screen pt-10 lg:pt-64 px-8">
