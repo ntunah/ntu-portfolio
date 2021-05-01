@@ -24,8 +24,12 @@ export default function Posts() {
       )
       .then(data => setPost(data))
       .catch(console.error);
-    
   }, []);
+  console.log(postData == null);
+  let noPost = "";
+  if (postData) {
+    noPost = <h3 className="text-lg flex justify-center cursive mt-10">No Post - feel free to contact me if you want to contribute here </h3>;
+  }
   return (
     <main className="bg-gray-100 min-h-screen p-24">
       <section className="container mx-auto">
@@ -35,6 +39,7 @@ export default function Posts() {
         <h2 className="text-lg text-gray-600 flex justify-center mb-12 ">
           Welcome to my page of blog posts
         </h2>
+        {noPost}
         {!postData && (
           <div className="grid justify-items-center">
             <Loader type="Puff" color="#00BFFF" height={100} width={100} />
