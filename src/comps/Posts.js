@@ -25,11 +25,17 @@ export default function Posts() {
       .then(data => setPost(data))
       .catch(console.error);
   }, []);
-  console.log(postData == null);
+
   let noPost = "";
   if (postData) {
-    noPost = <h3 className="text-lg flex justify-center cursive mt-10">No Post - feel free to contact me if you want to contribute here </h3>;
+    noPost = (
+      <h3 className="text-lg flex justify-center cursive mt-10">
+        No Post - feel free to contact me if you want to contribute here{" "}
+      </h3>
+    );
+    console.log("ghgttg " + postData);
   }
+
   return (
     <main className="bg-gray-100 min-h-screen p-24">
       <section className="container mx-auto">
